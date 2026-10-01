@@ -1,0 +1,7 @@
+# Netlify auto-applies its Next.js runtime (OpenNext adapter); no plugin entry needed.
+[build]
+  command = "yarn build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
