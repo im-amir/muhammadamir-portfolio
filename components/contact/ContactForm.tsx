@@ -81,24 +81,31 @@ export function ContactForm() {
       </div>
 
       <Field id="budget" label="Budget" error={errors.budget}>
-        <select
-          id="budget"
-          name="budget"
-          required
-          defaultValue={values?.budget ?? ""}
-          aria-invalid={Boolean(errors.budget)}
-          aria-describedby={describedBy("budget")}
-          className={fieldClass}
-        >
-          <option value="" disabled>
-            Select a range
-          </option>
-          {contact.budgets.map((budget) => (
-            <option key={budget} value={budget}>
-              {budget}
+        {/* Native select arrows ignore padding and differ per browser, so draw our own. */}
+        <div className="relative">
+          <select
+            id="budget"
+            name="budget"
+            required
+            defaultValue={values?.budget ?? ""}
+            aria-invalid={Boolean(errors.budget)}
+            aria-describedby={describedBy("budget")}
+            className={`${fieldClass} appearance-none pr-12`}
+          >
+            <option value="" disabled>
+              Select a range
             </option>
-          ))}
-        </select>
+            {contact.budgets.map((budget) => (
+              <option key={budget} value={budget}>
+                {budget}
+              </option>
+            ))}
+          </select>
+          <Icon
+            name="chevronDown"
+            className="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-muted"
+          />
+        </div>
       </Field>
 
       <Field id="message" label="Message" error={errors.message}>

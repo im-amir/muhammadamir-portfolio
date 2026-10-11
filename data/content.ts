@@ -338,10 +338,10 @@ export const contact = {
   intro:
     "Tell me a bit about what you're building and your timeline. I read every message personally.",
   budgets: [
-    "Under $5,000",
-    "$5,000 – $15,000",
-    "$15,000 – $50,000",
-    "$50,000+",
+    "Under $2,000",
+    "$2,000 – $5,000",
+    "$5,000 – $10,000",
+    "$10,000+",
     "Not sure yet",
   ],
   successMessage: "Thanks! Your message is on its way. I'll get back to you soon.",

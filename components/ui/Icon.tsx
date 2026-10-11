@@ -32,6 +32,7 @@ const strokePaths = {
   arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
   arrowLeft: <path d="M19 12H5M12 19l-7-7 7-7" />,
   check: <path d="M20 6 9 17l-5-5" />,
+  chevronDown: <path d="m6 9 6 6 6-6" />,
 } satisfies Record<string, ReactNode>;
 
 const githubPath =
